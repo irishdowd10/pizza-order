@@ -1,5 +1,7 @@
 //BUSSINESS LOGIC - BACKEND
-function Cup (garnishes,size,quanity) {
+var garnishes = [];
+
+function Cup (garnishes,size,quantity) {
   this.garnishes = garnishes;
   this.size = size;
   this.quantity = quantity;
@@ -14,11 +16,11 @@ Cup.prototype.cupPrice = function () {
   if (this.size ==="small") {
     cost += 8;
   } else if (this.size === "medium") {
-    cost +=11;
+    cost += 11;
   } else if (this.size === "large") {
-    cost +=15;
+    cost += 15;
   }
-  return cost * this.quantity;
+  return cost;
 
 };
 
@@ -28,9 +30,9 @@ $(document).ready(function() {
   $("#pizzaForm").submit(function(event) {
     event.preventDefault();
 
-    var size = $("select#cup-size").val();
+    var size = $("#cup-size").val();
     var garnishes = [];
-    var quanity = $("#quanity").val();
+    var quantity = $("#quantity").val();
 
     $("input:checkbox[name=cup-garnish]:checked").each(function(){
       garnishes.push($(this).val())
@@ -39,9 +41,9 @@ $(document).ready(function() {
     var newCup = new Cup(garnishes, size, quantity);
     var cupTotal = newCup.cupPrice();
 
-    $("#pizza-orders").show().append("hello");
+    $("#pizza-orders").show().append("hello" + cupTotal + "bye");
     // $('#receipt-greeting').append("hello you");
 
   });
-    console.log(cupTotal);
+
 });
