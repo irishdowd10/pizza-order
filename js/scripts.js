@@ -44,40 +44,11 @@ $(document).ready(function() {
     var newCup = new Cup(garnishes, size, quantity);
     var cupTotal = newCup.cupPrice();
 
-    $('#pizzaForm').trigger('reset');
-
 
     $(".container").hide();
 
-    $("#pizza-orders").show().append("<p class ='receipt'>Size:  " + size + "<br>" + "Garnishes: " + garnishes + "<br>" + "Price:" + " " + "$" + cupTotal + "<br></p><p class ='receipt'>Delivery name: " + " " + name + "<br> " + "Delivery address: "  +  street + " " + city + " " + zip + "<br>Thank you for your order!</p>");
+    $("#pizza-orders").show().append("Size:  "  + size + "<br>" + "Quantity: " + quantity + "<br> " + "Garnishes: " + garnishes + "<br>" + "Price:" + " " + "$" + cupTotal + "<br>Delivery name: " + " " + name + "<br>" + "Delivery address: "  +  street + ", " + city + ", " + zip + "<br><br> Thank you for your order!</p>");
     // $('#receipt-greeting').append("hello you");
-
-    var inputs = $('#contactForm :input');
-    if(newCup.length <= 0) {
-    alert("Your cart is empty! Add a cup to your cart!");
-  }
-  function validateContactForm(inputs) {
-    var emptyInputs = '';
-    // make sure all inputs have a val
-    inputs.each(function(index, input) {
-      if(input.value == "") {
-        emptyInputs += input.id + " is required!\n";
-      }
-    });
-
-    if(emptyInputs.length > 0) {
-      alert(emptyInputs);
-      return false;
-    }
-
-    return true;
-  }
-
-  if(!validateContactForm(inputs)) {
-      console.log('validation failed!');
-      return;
-    }
-
 
   });
 

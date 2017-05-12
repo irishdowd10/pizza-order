@@ -1,0 +1,11 @@
+.jumbotron {
+  background-image: url("img/cupo.jpg");
+  text-align: center;
+  text-emphasis-color: bold;
+}
+
+body {
+  background-color: #FFA833;
+  border-color: black;
+  border-width: 2px;
+}
