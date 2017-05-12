@@ -22,11 +22,11 @@
         <div class="form-group">
           <div class="contact">
             <label for="name">Your name:</label><br>
-            <input id="name" type="text" class="form-control">
+            <input id="name" required type="text" class="form-control">
           </div>
           <div class="contact">
             <label for="street">Street:</label><br>
-            <input id="street" type="text" class="form-control">
+            <input id="street" required type="text" class="form-control">
           </div>
           <div class="contact">
             <label for="city">City:</label><br>
@@ -38,7 +38,7 @@
           </div>
         </div>
       </div>
-    </form>    
+    </form>
         <!-- select size of cup -->
       <form id = "pizzaForm">
         <div class="panel panel-info">
@@ -46,9 +46,9 @@
             <h4 class="order-header">Choose a size:</h4>
           </div>
           <select id="cup-size" name="form-control">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="Large">Large</option>
+            <option value="small">Small ($8)</option>
+            <option value="medium">Medium ($11)</option>
+            <option value="Large">Large ($15)</option>
           </select>
         </div>
         <!--select garish/toppings -->
