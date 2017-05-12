@@ -2,10 +2,21 @@
   background-image: url("img/cupo.jpg");
   text-align: center;
   text-emphasis-color: bold;
+  height: 250px;
+
+
 }
 
 body {
   background-color: #FFA833;
   border-color: black;
   border-width: 2px;
+}
+
+.container {
+  border: 2px solid black;
+}
+
+.form-group {
+  padding: 20px;
 }

@@ -8,7 +8,9 @@ This program gives the user the opportunity to order a pizza online. The user wi
 
 
 ## Specifications
-
+* User can inputs name and address
+  * Input: name & address (user input)
+  * Output: John Dowd, 17885 Pine St, Portland OR 97229
 * User can select size of pizza via select
   * Input: small (select box)
   * Output: small (selected)
@@ -31,7 +33,7 @@ This program gives the user the opportunity to order a pizza online. The user wi
 * Clone the project in a text editor of your choice
 
 ## Known Bugs
-????
+None that I know of
 
 ## Support and contact details
 
