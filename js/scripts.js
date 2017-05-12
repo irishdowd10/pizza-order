@@ -29,6 +29,10 @@ $(document).ready(function() {
   $("#pizzaForm").submit(function(event) {
     event.preventDefault();
 
+    var name = $("#name").val();
+    var street = $('#street').val();
+    var city = $('#city').val();
+    var zip = $('#zip').val();
     var size = $("select#cup-size").val();
     var garnishes = [];
     var quantity = $("#quantity").val();
@@ -40,10 +44,12 @@ $(document).ready(function() {
     var newCup = new Cup(garnishes, size, quantity);
     var cupTotal = newCup.cupPrice();
 
-    $("#pizza-orders").show().append("<p class ='receipt'>Size:  " + size + "<br>" + "Garnishes: " + garnishes + "<br>" + "Price:" + " " + "$" + cupTotal + "<br></p>");
+    $("#container").hide();
+
+    $("#pizza-orders").show().append("<p class ='receipt'>Size:  " + size + "<br>" + "Garnishes: " + garnishes + "<br>" + "Price:" + " " + "$" + cupTotal + "<br></p><p class ='receipt'>Delivery name: " + " " + name + "<br> " + "Delivery address: "  +  street + " " + city + " " + zip + "<br>Thank you for your order!</p>");
     // $('#receipt-greeting').append("hello you");
 
-    $("#container").hide()
+
   });
 
 });
