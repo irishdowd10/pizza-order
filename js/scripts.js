@@ -19,11 +19,29 @@ Cup.prototype.cupPrice = function () {
     cost +=15;
   }
   return cost * this.quantity;
-  console.log(cost);
+
 };
 
 //USER LOGIC - FRONTEND
 
-$("#pizzaForm").submit(function(event) {
+$(document).ready(function() {
+  $("#pizzaForm").submit(function(event) {
     event.preventDefault();
-    var inputs = $('#contactForm :input');
+
+    var size = $("select#cup-size").val();
+    var garnishes = [];
+    var quanity = $("#quanity").val();
+
+    $("input:checkbox[name=cup-garnish]:checked").each(function(){
+      garnishes.push($(this).val())
+    });
+
+    var newCup = new Cup(garnishes, size, quantity);
+    var cupTotal = newCup.cupPrice();
+
+    $("#pizza-orders").show().append("hello");
+    // $('#receipt-greeting').append("hello you");
+
+  });
+    console.log(cupTotal);
+});
